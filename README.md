@@ -1,85 +1,55 @@
+🧠 Uncovering Trends in Antidepressant Prescriptions: Insights from the STEP UP NHS Challenge
 
-# Starting the python path: Introduction to Google colab
-## Starting resources
+During the past month, I had the opportunity to participate in the STEP UP NHS Online Career Challenge organized by Digdata and NHS England. The challenge tasked us with analyzing data on antidepressant drug costs and prescription volumes across UK regions from 2021 to 2024.
 
-•	If you are new to google colab you can watch an introduction to it here - https://www.youtube.com/watch?v=inN8seMm7UI 
+This project allowed me to apply data science to a real-world public health issue—shedding light on the cost and accessibility of mental health treatments—and deepened my appreciation for how data can drive impactful decisions in national healthcare policy.
 
-•	If you have never used python before you can read an introduction to the language here - https://www.w3schools.com/python/python_intro.asp 
+⸻
 
-## Setting up google colab 
-You will have more details for setting up google colab in your We Transfer file in the document 'Google colab intro'
+🔍 Key Insights from the Analysis
 
-1.	You should have access to the file ‘Digdata_python_path.ipynb’ in this github repository. Download this to your device somewhere where is accessible.
+📈 1. Rising Prescription Volume, Falling Costs
 
-2.	Navigate to the google colab website
+Over the four-year span, the number of antidepressant prescriptions increased, while the average cost per item declined.
+✅ This signals a positive dual trend:
+	•	Greater access to mental health care
+	•	Reduced national expenditure per prescription
+A win-win for both patients and the NHS.
 
-a.	If you have never used google colab before, you will be asked to create an account – which you can do with a pre-existing google account
+⸻
 
-b.	If you have an account, log in.
+🗺️ 2. Costs Decreased Across All UK Regions
 
- 
-3.	You will have a set of options, select  ‘Upload’,  and then browse for the file ‘Digdata_python_path.ipynb’ to upload
+Every UK region saw a reduction in total antidepressant spending from 2021 to 2024.
+	•	The Midlands region achieved the largest cost reduction
+	•	London observed the smallest decrease
 
- 
-4.	This should successfully load your notebook
+This showcases the widespread effectiveness of cost-containment strategies.
 
-a.	Note: whenever you see the symbol circled below, it means you can toggle to hide the section for ease of navigation of the document
- 
+⸻
 
-# Data we are using for analysis
+💊 3. Top 3 Drugs Drive Both Cost and Volume
 
-This data is from the NSHBSA Open Data Portal, and is called the 'Prescription Cost analysis' dataset.
+Just three drugs—Sertraline Hydrochloride, Amitriptyline Hydrochloride, and Citalopram Hydrobromide—accounted for:
+	•	Over 50% of all prescriptions
+	•	Over 50% of total antidepressant spending
 
-https://opendata.nhsbsa.net/dataset/prescription-cost-analysis-pca-monthly-data
+Despite their relatively low unit cost, their high prescription volume makes them the primary cost drivers.
 
-This data is open source, which means:
+Case Example: Sertraline Hydrochloride
+	•	💷 Avg. cost per item: £2.408
+	•	📊 Highest prescription volume
+	•	📉 Consistent decline in price over time
 
-- We can share it openly
-- It has no security concerns
+This illustrates how volume, not price, drives costs—and reflects the success of NHS efforts to manage spending on widely used medications.
 
-This is a monthly dataset that describes how many medicines were prescribed across all GP Practices in england, per NHS Region, and what they cost.
-This is 'real data', so actually describes real anti-depressant prescribing in England.
-We have merged, simplified and filtered all these monthly files into a single dataset.
+⸻
 
-The data is being read into this notebook using this github repo link below (do not delete).
+🎯 Outcomes & Takeaways
 
-## BSA_ODP_PCA_REGIONAL_DRUG_SUMMARY.csv
+Participating in this challenge:
+	•	Strengthened my skills in data analysis, trend interpretation, and data visualization
+	•	Offered firsthand experience applying data science to public health policy
+	•	Contributed to important conversations around the affordability and accessibility of mental health care
 
-This dataset contains 6 columns:
-
-*   *YEAR*: The year in the format YYYY. There are 4 years-worth of prescribing information in the dataset.
-*   *YEAR_MONTH*: The year and month, in the format YYYYMM, where 202401 is the same as January 2024. There are 46 year-month values in the data.
-*   *REGION*: The NHS Region. There are 7 regions in the data.
-*   *DRUG*: The name of the anti-depressant medicine. There are 32 of these in the data.
-*   *ITEMS*: How many items were prescribed.
-*   *COST*: The combined cost for all those items.
-
-In a sentence we could describe this dataset as:
-
-- Per English NHS Region and per year-month, the volume and cost of each antidepressant drug prescribed.
-
-And what we are going to do with this data is:
-
-- Understand national and regional prescribing volumes and costs
-- Understand national and regional prescribing trends
-- Understand monthly and annual trends
-- And finally, maybe even predict future monthly anti-depressant prescribing volumes
-
-### BSA_ODP_PCA_REGIONAL_SUMMARY.csv
-
-So we can see that the original data differs in a few ways:
-
-- It only contains antidepressant drugs
-- It doesn't contain BNF Chapter and BNF Section information
-
-The BNF stands for the *British National Formulary*.
-The BNF is structured hierarchically into Chapters, Sections and Chemical Substances (Drugs).
-
-For example:
-
-- Amitriptyline hydrochloride is an actual antidepressant *DRUG*
-- Amitriptyline hydrochloride is one of many *DRUG* within the 'Antidepressant drugs' *BNF_SECTION*
-- Antidepressant drugs is one of many *BNF_SECTION* within the '04: Central Nervous System' *BNF_CHAPTER*
-- And there are 23 *BNF_CHAPTER* (although very little prescribing stems from some of the chapters)
-
-In summary, BNF chapters are split into sections, which are then split into actual drugs (i.e. a hierarchy).
+A big thank you to NHS England and The Data Inspiration Group for this opportunity!
